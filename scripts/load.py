@@ -5,7 +5,7 @@ import os
 TRANSFORMED_DATA_PATH = "data/processed"
 
 #PostgreSQL connection
-DB_URI = "postgresql+psycopg2://localhost/crypto_db"
+DB_URI = "postgresql+psycopg2://airflow:airflow@postgres/airflow"
 
 def get_latest_file(folder_path):
     files = [f for f in os.listdir(folder_path) if f.endswith('.csv')]
